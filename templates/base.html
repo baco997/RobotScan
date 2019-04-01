@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+    <title>Robot Scanner</title> 
+    {% block head %}
+    {% end %}
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+        <div class="navbar-header">
+        	<a class="navbar-brand waves-effect waves-dark" href="/"><i class="large material-icons">track_changes</i> <strong>Robot Scanner</strong></a>
+			<div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
+        </div>
+
+        <ul class="nav navbar-top-links navbar-right"> 
+			<li><a class="waves-effect waves-button"><i class="fa fa-search"></i></a></li>
+			<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i class="fa fa-tasks fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i class="fa fa-bell fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
+			<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i class="fa fa-user fa-fw"></i> <b>Admin</b> <i class="material-icons right">arrow_drop_down</i></a></li>
+         </ul>
+        </nav>
+
+<!-- 下拉导航条 -->
+<ul id="dropdown1" class="dropdown-content">
+	<li><a href="#"><i class="fa fa-user fa-fw"></i> 配置</a></li>
+	<li><a href="#"><i class="fa fa-sign-out fa-fw"></i> 注销</a></li>
+</ul>
+
+<ul id="dropdown2" class="dropdown-content w250">
+	<li>
+    	<div>
+    	<i class="fa fa-comment fa-fw"></i> New Comment
+    	<span class="pull-right text-muted small">4 min</span>
+    	</div>
+	</li>
+	<li class="divider"></li>
+		<li>
+		<div>
+			<i class="fa fa-twitter fa-fw"></i> 3 New Followers
+			<span class="pull-right text-muted small">12 min</span>
+		</div>
+ 		</li>
+	<li class="divider"></li>
+		<li>
+		<div>
+			<i class="fa fa-envelope fa-fw"></i> Message Sent
+			<span class="pull-right text-muted small">4 min</span>
+			</div>
+		</li>
+	<li class="divider"></li>
+ 		<li>
+		<div>
+			<i class="fa fa-tasks fa-fw"></i> New Task
+			<span class="pull-right text-muted small">4 min</span>
+		</div>
+		</li>
+	<li class="divider"></li>
+		<li>
+		<div>
+			<i class="fa fa-upload fa-fw"></i> Server Rebooted
+			<span class="pull-right text-muted small">4 min</span>
+		</div>
+		</li>
+	<li class="divider"></li>
+		<li>
+		<a class="text-center" href="#">
+ 		<strong>See All Alerts</strong>
+		<i class="fa fa-angle-right"></i>
+		</a>
+	</li>
+</ul>
+
+<ul id="dropdown3" class="dropdown-content dropdown-tasks w250">
+<li>
+	<a href="#">
+		<div>
+			<p>
+			<strong>Task 1</strong>
+			<span class="pull-right text-muted">60% Complete</span>
+			</p>
+			<div class="progress progress-striped active">
+				<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+				<span class="sr-only">60% Complete (success)</span>
+				</div>
+			</div>
+		</div>
+	</a>
+</li>
+
+<li class="divider"></li>
+	<li>
+		<a href="#">
+			<div>
+				<p>
+					<strong>Task 2</strong>
+					<span class="pull-right text-muted">28% Complete</span>
+				</p>
+				<div class="progress progress-striped active">
+					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+						<span class="sr-only">28% Complete</span>
+					</div>
+				</div>
+			</div>
+		</a>
+	</li>
+
+<li class="divider"></li>
+	<li>
+		<a href="#">
+			<div>
+				<p>
+					<strong>Task 3</strong>
+					<span class="pull-right text-muted">60% Complete</span>
+				</p>
+				<div class="progress progress-striped active">
+					<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+						<span class="sr-only">60% Complete (warning)</span>
+					</div>
+				</div>
+			</div>
+		</a>
+	</li>
+
+<li class="divider"></li>
+	<li>
+		<a href="#">
+			<div>
+				<p>
+					<strong>Task 4</strong>
+					<span class="pull-right text-muted">85% Complete</span>
+				</p>
+				<div class="progress progress-striped active">
+					<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+						<span class="sr-only">85% Complete (danger)</span>
+					</div>
+				</div>
+			</div>
+		</a>
+	</li>
+</ul>
+
+<!--导航条  -->
+<nav class="navbar-default navbar-side" role="navigation">
+	<div class="sidebar-collapse">
+		<ul class="nav" id="main-menu">
+		<li>
+			<a href="/"	class="active-menu waves-effect waves-dark" ><i class="fa fa-home"></i>首页</a>
+		</li>
+		<li>
+			<a href="/scan/" class="waves-effect waves-dark"><i class="fa fa-fw fa-dot-circle-o"></i>扫描</a>
+		</li>
+		<li>
+			<a href="/task/" class="waves-effect waves-dark"><i class="fa fa-tasks"></i>任务</a>
+		</li>
+		<li>
+			<a href="/vul/" class="waves-effect waves-dark"><i class="fa fa-bug"></i>漏洞</a>
+		</li>
+		<li>
+			<a href="/part/" class="waves-effect waves-dark"><i class="fa fa-gears"></i>插件</a>
+		</li>
+		<li>
+			<a href="/report/" class="waves-effect waves-dark"><i class="fa fa-file-text"></i>报告</a>
+		</li>
+		</ul>
+	</div>
+</nav>
+
+{% block content %}
+{% end %}
+
+</div>
+
+<hr>
+<footer><p style="text-align: center"><a href="https://www.chaos.cn" target="_blank" class="text-muted">© 2018 Robot Ltd. </a></p></footer>
+
+</body>
+</html>

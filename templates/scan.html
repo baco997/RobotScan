@@ -1,0 +1,107 @@
+﻿{% extends "base.html" %}
+
+{% block head %}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../static/materialize/css/materialize.min.css" media="screen,projection" />
+<!-- Bootstrap Styles-->
+<link href="../static/css/bootstrap.css" rel="stylesheet" />
+<!-- FontAwesome Styles-->
+<link href="../static/css/font-awesome.css" rel="stylesheet" />
+<!-- Morris Chart Styles-->
+<link href="../static/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+<!-- Custom Styles-->
+<link href="../static/css/custom-styles.css" rel="stylesheet" />
+<!-- Google Fonts-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="../static/js/Lightweight-Chart/cssCharts.css"> 
+{% end %}
+
+{% block content %}
+<div id="page-wrapper" >
+
+<!-- 导航区 -->
+<div class="page-header" >
+    <a href="#scan0" role="tab" data-toggle="tab" class="btn btn-primary" style="margin: 0 10px;">主动扫描</a>
+    <a href="#scan1" role="tab" data-toggle="tab" class="btn" style="margin: 0 10px;">被动扫描</a>
+    <a href="#proxy" role="tab" data-toggle="tab" class="btn" style="margin: 0 10px;">代理设置</a>
+    <a href="#scantype" role="tab" data-toggle="tab" class="btn" style="margin: 0 10px;">扫描类型</a>
+    <a href="#scantime" role="tab" data-toggle="tab" class="btn" style="margin: 0 10px;">排除时间</a>
+</div>
+
+<div id="page-inner"> 
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="scan0">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            主动扫描
+        </div>
+        <div class="panel-body">
+            面板内容
+        </div>
+    </div>
+</div>
+
+<div role="tabpanel" class="tab-pane" id="scan1">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            被动扫描
+        </div>
+        <div class="panel-body">
+            面板内容
+        </div>
+    </div>
+</div>
+
+<div role="tabpanel" class="tab-pane" id="proxy">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            代理设置
+        </div>
+        <div class="panel-body">
+            面板内容
+        </div>
+    </div>
+</div>
+
+<div role="tabpanel" class="tab-pane" id="scantype">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            扫描类型
+        </div>
+        <div class="panel-body">
+            面板内容
+        </div>
+    </div>
+</div>
+
+<div role="tabpanel" class="tab-pane" id="scantime">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            扫描时间
+        </div>
+        <div class="panel-body">
+            面板内容
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script src="../static/js/jquery-1.10.2.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/materialize/js/materialize.min.js"></script>
+<!-- Metis Menu Js -->
+<script src="../static/js/jquery.metisMenu.js"></script>
+<!-- Morris Chart Js -->
+<script src="../static/js/morris/raphael-2.1.0.min.js"></script>
+<script src="../static/js/morris/morris.js"></script>
+<script src="../static/js/easypiechart.js"></script>
+<script src="../static/js/easypiechart-data.js"></script>
+<script src="../static/js/Lightweight-Chart/jquery.chart.js"></script>
+<!-- Custom Js -->
+<script src="../static/js/custom-scripts.js"></script> 
+{% end %}

